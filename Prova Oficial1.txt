@@ -1,0 +1,19 @@
+create table pessoasem100( id bigint(20) primary key not null auto_increment,
+nome varchar(255) default null,
+sobrenome varchar(255) default null);
+
+create table pessoacom100( id bigint(20) primary key not null auto_increment,
+nome varchar(255) default null,
+sobrenome varchar(255) default null);
+CREATE INDEX Indice_pessoacom100 ON pessoacom100 (nome);
+SELECT * FROM pessoacom10 USE INDEX (Indici_pessoacom100) WHERE nome = "Sophia"
+
+
+create table test( id bigint(20) primary key not null auto_increment,
+nome varchar(255) default null,
+sobrenome varchar(255) default null);
+
+create table test2( id bigint(20) primary key not null auto_increment,
+nome varchar(255) default null,
+sobrenome varchar(255) default null);
+CREATE INDEX Indice_test2 ON test2 (nome);
