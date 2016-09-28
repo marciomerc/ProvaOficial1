@@ -12,6 +12,5 @@ public interface Persistible<T> {
 	void delete(T entity);
 
 	void update(T entity);
-	
-	
+
 }

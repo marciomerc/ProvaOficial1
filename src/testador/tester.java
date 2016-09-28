@@ -24,12 +24,23 @@ public class tester {
 		System.out.println("começou");
 		long comecou = System.currentTimeMillis();
 		// faz o trabalho a ser medido
-		//System.out.println(pdao.selectcomindex("Sophia"));
-		//System.out.println(pdao.selectsemindex("Sophia"));
-
-		//GERAR E INSERIR OS REGISTRO.
-		//pdao.gerar();
+		pdao.selectcomindex("Sophia");
+		long terminou = System.currentTimeMillis() - comecou;
+		System.out.println("duração com index é de:" + terminou + "milisegundos. Ou :"+ terminou/1000+"segundos");
+		System.out.println("terminou");
 		
+		long comecou2 = System.currentTimeMillis();
+		// faz o trabalho a ser medido
+		pdao.selectsemindex("Sophia");
+		long terminou2 = System.currentTimeMillis() - comecou2;
+		System.out.println("duração sem index é de:" + terminou2 + "milisegundos. Ou :"+ terminou2/1000+"segundos");
+		System.out.println("terminou");
+		
+		//GERAR E INSERIR OS REGISTRO.
+		/*long comecou3 = System.currentTimeMillis();
+		pdao.gerar();
+		long terminou3 = System.currentTimeMillis() - comecou3;
+		System.out.println("duração sem index é de:" + terminou3 + "milisegundos. Ou :"+ terminou3/1000+"segundos");*/
 		
 		//passo 2 
 		// como deletar um registro;
@@ -53,9 +64,6 @@ public class tester {
 		//p.setId(1);
 		//pdao.update(p);
 
-		long terminou = System.currentTimeMillis() - comecou;
-		System.out.println("duração é de:" + terminou + "milisegundos. Ou :"+ terminou/1000+"segundos");
-		System.out.println("terminou");
 		conexao.fechar();
 		
 		// System.out.println(ldao.getAll());

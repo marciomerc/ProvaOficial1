@@ -209,7 +209,7 @@ public class ProvaDAO implements Persistible<Pessoa> {
 			nrAleatorio = 0 + ramdom.nextInt(50);
 			nrAleatorio2 = 0 + ramdom.nextInt(50);
 			// imprime um resultado aleatório
-			System.out.print(i + "[" + nomes[nrAleatorio] + "," + sobrenomes[nrAleatorio2] + "]\n ");
+			//System.out.print(i + "[" + nomes[nrAleatorio] + "," + sobrenomes[nrAleatorio2] + "]\n ");
 			Pessoa pessoa = new Pessoa(nomes[nrAleatorio], sobrenomes[nrAleatorio2]);
 			pdao.save(pessoa);
 		}
